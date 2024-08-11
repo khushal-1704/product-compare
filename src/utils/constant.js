@@ -58,6 +58,10 @@ export const columns = [
     title: "Price",
     dataIndex: "price",
     key: "price",
+    sorter: (a, b) => {
+      return a.price - b.price
+    },
+    sortDirections: ['descend', 'ascend'],
   },
   {
     title: "Band",
@@ -68,6 +72,10 @@ export const columns = [
     title: "Discount",
     dataIndex: "discountPercentage",
     key: "discountPercentage",
+    sorter: (a, b) => {
+      return a.discountPercentage - b.discountPercentage
+    },
+    sortDirections: ['descend', 'ascend'],
   },
   {
     title: "",

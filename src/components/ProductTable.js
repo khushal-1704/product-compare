@@ -1,9 +1,11 @@
 import { Table } from 'antd';
 import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+
+import { addProductList } from '../store/slice/productsSlice';
+
 import { formatTableData } from '../utils/FormatTableData';
 import { columns } from '../utils/constant';
-import { useDispatch, useSelector } from 'react-redux';
-import { addProductList } from '../store/slice/productsSlice';
 
 const ProductTable = ({ handleCompareButtonClick }) => {
   const [isLoading, setIsLoading] = useState(true)

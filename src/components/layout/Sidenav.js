@@ -36,7 +36,7 @@ function Sidenav() {
       <hr />
       <Menu theme="light" mode="inline">
         <Menu.Item key="1">
-          <NavLink to="/">
+          <NavLink exact to="/">
             <span
               className="icon"
               style={{

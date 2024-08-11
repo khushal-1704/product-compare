@@ -22,7 +22,6 @@ function Main({ children }) {
   let { pathname, } = useLocation();
   pathname = pathname.replace("/", "");
 
-  console.log('sidenavColor', sidenavColor)
 
   return (
     <Layout

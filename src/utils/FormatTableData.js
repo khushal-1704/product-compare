@@ -38,21 +38,13 @@ export const formatTableData = (tableData, handleButtonClick, comparisonProductL
           </div>
         </>
       ),
-      price: (
-        <>
-          <p>{table.price}</p>
-        </>
-      ),
+      price: table.price,
       brand: (
         <>
           <p>{table.brand ?? "-"}</p>
         </>
       ),
-      discountPercentage: (
-        <>
-          <p>{table.discountPercentage}%</p>
-        </>
-      ),
+      discountPercentage: table.discountPercentage,
       compare: (
         <>
           <Button type="primary" disabled={isDisabled} onClick={() => handleButtonClick(table)} >
