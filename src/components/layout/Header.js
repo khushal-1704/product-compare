@@ -3,11 +3,10 @@ import {
   Row,
   Col,
   Breadcrumb,
-  Button,
 } from "antd";
 import { NavLink, Link } from "react-router-dom";
 
-import { profile, toggler } from "../../assets/svgs";
+import { UserOutlined } from "@ant-design/icons";
 
 
 function Header({
@@ -31,15 +30,11 @@ function Header({
           </Breadcrumb>
         </Col>
         <Col span={24} md={18} className="header-control">
-          <Button
-            type="link"
-            className="sidebar-toggler"
-          >
-            {toggler}
-          </Button>
           <Link to="/sign-in" className="btn-sign-in">
-            {profile}
-            <span>Sign in</span>
+            <div className="">
+              <UserOutlined />
+              <span style={{ fontSize: '16px', margin: '0px 10px' }}>Greetings User</span>
+            </div>
           </Link>
         </Col>
       </Row>

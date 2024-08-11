@@ -28,6 +28,9 @@ const ProductComparisonTable = () => {
         })),
       ];
       setColumns(columns)
+    } else if (!compareList.length) {
+      setColumns([])
+      setDataSource([])
     }
   }, [compareList]);
 

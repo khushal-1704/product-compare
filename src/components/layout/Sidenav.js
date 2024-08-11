@@ -1,7 +1,8 @@
 import { Menu } from "antd";
 import { NavLink, useLocation } from "react-router-dom";
 
-function Sidenav({ color }) {
+function Sidenav() {
+  const color = "#1890ff"
   const { pathname } = useLocation();
   const page = pathname.replace("/", "");
 
@@ -47,7 +48,7 @@ function Sidenav({ color }) {
             <span className="label">Product Detail</span>
           </NavLink>
         </Menu.Item>
-        <Menu.Item key="2">
+        <Menu.Item key="2" style={{ marginTop: '15px' }}>
           <NavLink to="/product-compare">
             <span
               className="icon"

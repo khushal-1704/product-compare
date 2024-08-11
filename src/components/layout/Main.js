@@ -9,7 +9,7 @@ const { Header: AntHeader, Content, Sider } = Layout;
 
 function Main({ children }) {
   const [visible, setVisible] = useState(false);
-  const [placement, setPlacement] = useState("right");
+  // const [placement, setPlacement] = useState("right");
   const [sidenavColor, setSidenavColor] = useState("#1890ff");
   const [sidenavType, setSidenavType] = useState("transparent");
   const [fixed, setFixed] = useState(false);
@@ -22,13 +22,7 @@ function Main({ children }) {
   let { pathname, } = useLocation();
   pathname = pathname.replace("/", "");
 
-  useEffect(() => {
-    if (pathname === "rtl") {
-      setPlacement("left");
-    } else {
-      setPlacement("right");
-    }
-  }, [pathname]);
+  console.log('sidenavColor', sidenavColor)
 
   return (
     <Layout
